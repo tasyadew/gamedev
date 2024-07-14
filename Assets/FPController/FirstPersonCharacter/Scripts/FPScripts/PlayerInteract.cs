@@ -49,6 +49,16 @@ public class PlayerInteract : MonoBehaviour
                     {
                         hit.transform.GetComponent<DoorScript.Door>().OpenDoor();
                     }
+
+                    if (hit.transform.GetComponent<InteractableItem>())
+                    {
+                        hit.transform.GetComponent<InteractableItem>().Interact();
+                    }
+
+                    // if (hit.transform.GetComponent<AnswerScript>())
+                    // {
+                    //     hit.transform.GetComponent<AnswerScript>().Answer();
+                    // }
                 }
 
                 if (currentInteractableItem && newInteractable != currentInteractableItem)
