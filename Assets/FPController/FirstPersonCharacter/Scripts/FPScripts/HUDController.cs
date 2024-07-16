@@ -13,6 +13,7 @@ public class HUDController : MonoBehaviour
     }
 
     [SerializeField] TMP_Text interactionText;
+    [SerializeField] GameObject interactionTextBox;
 
     public void EnableInteractionText(string text)
     {
